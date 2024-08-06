@@ -1,0 +1,24 @@
+{% extends 'inner-page.html' %}
+{% load static %}
+{% block body %}
+
+    <table class="table table-dark">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+
+   {% for x in patients %}
+       <tr>
+           <td>{{ x.name }}</td>
+           <td>{{ x.email }}</td>
+           <td>{{ x.age }}</td>
+       </tr>
+
+   {% endfor %}
+
+
+
+    </table>
+{% endblock %}
